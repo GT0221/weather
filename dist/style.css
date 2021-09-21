@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+  
+input,
+label {
+    margin: 0.4rem 0;
+}
+  
+input {
+    width: 25%;
+    padding: 8px;
+}
+
+  label {
+    display: block;
+    font: 1rem "Fira Sans", sans-serif;
+}
+  
+button.search-button {
+    cursor: pointer;
+    width: fit-content;
+    padding: 8px;
+}
+  
+#error {
+    display: none;
+    font-size: 12px;
+    padding: 10px;
+}
+  
+.project-title {
+    grid-area: title;
+    background: rgb(141, 194, 243);
+    padding: 20px 0px 20px 10px;
+}
+  
+.form-area {
+    text-align: center;
+}
+  
+.btn {
+    background-color: #48484a;
+    border-color: #48484a;
+    color: #f2f2f2;
+}
+  
+.units .btn,
+.daily-hourly-btns .btn {
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+    padding: 8px;
+}
+  
+.units .btn:hover,
+.daily-hourly-btns .btn:hover {
+    background-color: rgb(228, 203, 203);
+    color: black;
+}
+  
+  .units {
+    grid-area: units-btn;
+}
+
+  .daily-hourly-btns {
+    grid-area: daily-hourly-btns;
+}
+  
+.weather-content {
+    display: grid;
+    grid-template-areas:
+      "units-btn units-btn units-btn"
+      "current current current"
+      "daily-hourly-btns daily-hourly-btns daily-hourly-btns"
+      "swiper swiper swiper";
+    row-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 20px;
+}
+  
+.current-forecast {
+    grid-area: current;
+    text-align: center;
+    padding-top: 20px;
+}
+  
+.swiper {
+    width: 75%;
+    grid-area: swiper;
+}
+  
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+  
+@media only screen and (max-width: 900px) {
+    html,
+    body {
+      font-size: 15px;
+    }
+  
+    input {
+      width: 70%;
+    }
+  
+    .swiper,
+    .swiper-slide {
+      width: 100%;
+    }
+} 
