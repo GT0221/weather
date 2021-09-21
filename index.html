@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header>
+        <div class="project-title">
+            <h1>🌤 Weather</h1>
+        </div>
+        
+        <div class="form-area">
+            <form novalidate>
+                <label for="location">Search by City:</label>
+                <input type="text" id="location" name="location" placeholder="New York, US or New York, NY, US">
+                <button type="submit" class="search-button btn">Search</button>
+                <br>
+                <span id="error">Not found. For better success enter the "city's name, comma, 2-letter country code (ISO3166)".</span>
+            </form>
+        </div>
+    </header>
+    <body>
+        <div class="weather-content">
+            <div class="units">
+                <button class="btn" type="button">°C</button>
+                <button class="btn" type="button">°F</button>
+            </div>
+            <div class="current-forecast"></div>
+            <div class="daily-hourly-btns">
+                <button class="btn" type="button">Hourly</button>
+                <button class="btn" type="button">Daily</button>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
